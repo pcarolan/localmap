@@ -7,13 +7,17 @@ const MARKER_COLORS = {
     shop: '#2d5a30',
     landmark: '#2d5a30',
     event: '#c07a3a',
-    news: '#2e7f7c'
+    news: '#2e7f7c',
+    spa: '#7b5ea7'
 };
 
 let map;
 let allItems = [];
 let markers = [];
 let activeFilter = 'all';
+let allPlaces = [];
+let allQuestions = [];
+let placeMarkers = {};
 
 function formatPostedAt(isoStr) {
     if (!isoStr) return null;
@@ -51,12 +55,18 @@ async function fetchJSON(url) {
 }
 
 async function loadData() {
-    const [events, news] = await Promise.all([
+    const [places, events, news, questions] = await Promise.all([
+        fetchJSON('data/places.json'),
         fetchJSON('data/events.json'),
-        fetchJSON('data/news.json')
+        fetchJSON('data/news.json'),
+        fetchJSON('data/questions.json')
     ]);
 
+    allPlaces = places;
+    allQuestions = questions;
+
     allItems = [
+        ...places.map(p => ({ ...p, type: 'place' })),
         ...events.map(e => ({ ...e, type: 'event' })),
         ...news.map(n => ({ ...n, type: 'news' }))
     ];
@@ -76,12 +86,13 @@ const MARKER_ICONS = {
     shop: { emoji: '🛍️', label: 'Shop' },
     landmark: { emoji: '🏨', label: 'Landmark' },
     event: { emoji: '📅', label: 'Event' },
-    news: { emoji: '📰', label: 'News' }
+    news: { emoji: '📰', label: 'News' },
+    spa: { emoji: '💆', label: 'Spa' }
 };
 
 function createMarkerIcon(type, category) {
     const icon = MARKER_ICONS[category] || MARKER_ICONS[type] || MARKER_ICONS.place;
-    const color = MARKER_COLORS[type] || MARKER_COLORS.place;
+    const color = MARKER_COLORS[category] || MARKER_COLORS[type] || MARKER_COLORS.place;
     return L.divIcon({
         className: 'custom-marker',
         html: `<div class="sim-marker" style="--marker-color:${color}"><span class="sim-marker-icon">${icon.emoji}</span></div>`,
@@ -94,6 +105,7 @@ function createMarkerIcon(type, category) {
 function addMarkers(items) {
     markers.forEach(m => map.removeLayer(m));
     markers = [];
+    placeMarkers = {};
 
     items.forEach(item => {
         const marker = L.marker([item.lat, item.lng], {
@@ -115,10 +127,20 @@ function addMarkers(items) {
 
         marker.bindPopup(popupHtml);
         markers.push(marker);
+
+        if (item.id) {
+            placeMarkers[item.id] = marker;
+        }
     });
 }
 
 function render() {
+    if (activeFilter === 'qa') {
+        renderQA();
+        addMarkers(allItems.filter(item => item.type === 'place'));
+        return;
+    }
+
     const filtered = activeFilter === 'all'
         ? allItems
         : allItems.filter(item => item.type === activeFilter);
@@ -140,7 +162,7 @@ function renderFeed(items) {
         const div = document.createElement('div');
         div.className = 'feed-item';
         const title = item.name || item.title;
-        const badgeClass = `badge-${item.type}`;
+        const badgeClass = item.category ? `badge-${item.category}` : `badge-${item.type}`;
 
         let eventLine = '';
         if (item.eventDate) {
@@ -151,7 +173,7 @@ function renderFeed(items) {
         const posted = item.postedAt ? formatPostedAt(item.postedAt) : '';
 
         div.innerHTML = `
-            <span class="feed-item-badge ${badgeClass}">${item.type}</span>
+            <span class="feed-item-badge ${badgeClass}">${item.category || item.type}</span>
             <div class="feed-item-title">${title}</div>
             ${eventLine ? `<div class="feed-item-event-date">${eventLine}</div>` : ''}
             ${item.address ? `<div class="feed-item-meta">${item.address}</div>` : ''}
@@ -166,6 +188,61 @@ function renderFeed(items) {
         });
 
         feed.appendChild(div);
+    });
+}
+
+function renderQA() {
+    const feed = document.getElementById('feed');
+    feed.innerHTML = '';
+
+    if (allQuestions.length === 0) {
+        feed.innerHTML = '<div style="padding:32px 20px;color:#9a9889;text-align:center;font-size:14px;">No questions yet</div>';
+        return;
+    }
+
+    allQuestions.forEach(q => {
+        const card = document.createElement('div');
+        card.className = 'qa-card';
+
+        const answerPlaces = q.answerPlaceIds
+            .map(id => allPlaces.find(p => p.id === id))
+            .filter(Boolean);
+
+        let answersHtml = '';
+        answerPlaces.forEach(place => {
+            answersHtml += `
+                <div class="qa-answer-item" data-place-id="${place.id}">
+                    <div class="qa-answer-name">${place.name}</div>
+                    <div class="qa-answer-addr">${place.address}</div>
+                    <div class="qa-answer-desc">${place.description}</div>
+                </div>
+            `;
+        });
+
+        card.innerHTML = `
+            <div class="qa-question">${q.question}</div>
+            <div class="qa-answers">${answersHtml}</div>
+        `;
+
+        card.querySelector('.qa-question').addEventListener('click', () => {
+            card.classList.toggle('expanded');
+        });
+
+        card.querySelectorAll('.qa-answer-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const placeId = item.dataset.placeId;
+                const place = allPlaces.find(p => p.id === placeId);
+                if (place) {
+                    map.flyTo([place.lat, place.lng], 16);
+                    if (placeMarkers[placeId]) {
+                        placeMarkers[placeId].openPopup();
+                    }
+                }
+            });
+        });
+
+        feed.appendChild(card);
     });
 }
 

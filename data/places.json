@@ -58,5 +58,35 @@
     "description": "Specialty food store featuring preserves, salsas, and pantry goods made from locally foraged and Michigan-grown fruits. Founded by Justin Rashid in 1982.",
     "address": "411 E Lake St, Petoskey, MI 49770",
     "postedAt": "2026-02-22T08:25:00-05:00"
+  },
+  {
+    "id": "place-7",
+    "name": "The Spa at Boyne Mountain",
+    "category": "spa",
+    "lat": 45.1612,
+    "lng": -84.9321,
+    "description": "Full-service resort spa with cedar sauna, steam room, indoor/outdoor heated pool, whirlpool hot tub, massage, facials, body treatments, and salon services. Day passes available.",
+    "address": "1 Boyne Mountain Rd, Boyne Falls, MI 49713",
+    "postedAt": "2026-02-22T09:00:00-05:00"
+  },
+  {
+    "id": "place-8",
+    "name": "The Spa at Inn at Bay Harbor",
+    "category": "spa",
+    "lat": 45.3631,
+    "lng": -85.0790,
+    "description": "Named Michigan's 'Most Gorgeous Spa.' Full range of massage, body treatments, facials, and nail services. Outdoor pool and hot tub available for lodging guests. 24/7 fitness center.",
+    "address": "3600 Village Harbor Dr, Bay Harbor, MI 49770",
+    "postedAt": "2026-02-22T09:05:00-05:00"
+  },
+  {
+    "id": "place-9",
+    "name": "Willoway Spa and Wellness",
+    "category": "spa",
+    "lat": 45.3578,
+    "lng": -84.9280,
+    "description": "Northern Michigan's premiere spa and fitness center offering infrared sauna, massage, facials, body work, and fitness classes. Focused on natural, non-toxic wellness products.",
+    "address": "1691 US-131, Petoskey, MI 49770",
+    "postedAt": "2026-02-22T09:10:00-05:00"
   }
 ]
