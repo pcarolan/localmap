@@ -5,51 +5,69 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     height: 100vh;
     overflow: hidden;
+    color: #3a3832;
+    background: #faf9f6;
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
+
+/* ── Header ── */
 
 #header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 48px;
-    background: #1a1a2e;
-    color: #fff;
+    height: 60px;
+    background: #fefefe;
+    color: #3a3832;
     display: flex;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 24px;
     z-index: 1000;
-    gap: 12px;
+    gap: 14px;
+    border-bottom: 1px solid #eeedea;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
 }
 
 #header h1 {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: #2d5a30;
 }
 
 #sidebar-toggle {
     background: none;
     border: none;
-    color: #fff;
-    font-size: 20px;
+    color: #3a3832;
+    font-size: 22px;
     cursor: pointer;
-    padding: 4px 8px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: background 0.2s ease;
 }
+
+#sidebar-toggle:hover {
+    background: #f0efec;
+}
+
+/* ── Sidebar ── */
 
 #sidebar {
     position: fixed;
-    top: 48px;
+    top: 60px;
     left: 0;
     bottom: 0;
-    width: 350px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
+    width: 400px;
+    background: #faf9f6;
     z-index: 999;
     overflow-y: auto;
-    border-right: 1px solid #e0e0e0;
+    border-right: 1px solid #eeedea;
     transition: transform 0.3s ease;
 }
 
@@ -57,96 +75,147 @@ body {
     transform: translateX(-100%);
 }
 
+/* ── Filters ── */
+
 #filters {
     display: flex;
     gap: 8px;
-    padding: 12px;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 18px 20px;
+    border-bottom: 1px solid #eeedea;
+    background: #fefefe;
     flex-wrap: wrap;
 }
 
 .filter-btn {
-    padding: 6px 14px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    background: #fff;
+    padding: 8px 18px;
+    border: 1.5px solid #dddcd8;
+    border-radius: 24px;
+    background: #fefefe;
     cursor: pointer;
-    font-size: 13px;
-    transition: all 0.2s;
+    font-family: inherit;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #6b6960;
+    transition: all 0.2s ease;
 }
 
 .filter-btn.active {
-    background: #1a1a2e;
+    background: #2d5a30;
     color: #fff;
-    border-color: #1a1a2e;
+    border-color: #2d5a30;
 }
 
 .filter-btn:hover:not(.active) {
-    background: #f0f0f0;
+    border-color: #b0aea6;
+    color: #3a3832;
+    background: #f5f4f1;
 }
 
+/* ── Feed ── */
+
 #feed {
-    padding: 8px;
+    padding: 14px;
 }
 
 .feed-item {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 14px;
+    background: #fff;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    border: 1px solid transparent;
 }
 
 .feed-item:hover {
-    background: #f5f5f5;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    border-color: #eeedea;
 }
 
 .feed-item-title {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
+    color: #3a3832;
+    letter-spacing: -0.15px;
+}
+
+.feed-item-event-date {
+    font-size: 13px;
+    font-weight: 600;
+    color: #c07a3a;
+    margin-bottom: 5px;
 }
 
 .feed-item-meta {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 4px;
+    font-size: 13px;
+    color: #6b6960;
+    margin-bottom: 6px;
+}
+
+.feed-item-posted {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 11px;
+    color: #9a9889;
+    padding: 3px 10px;
 }
 
 .feed-item-desc {
-    font-size: 13px;
-    color: #444;
-    line-height: 1.4;
+    font-size: 14px;
+    color: #6b6960;
+    line-height: 1.6;
 }
 
 .feed-item-badge {
     display: inline-block;
-    padding: 2px 8px;
-    border-radius: 10px;
+    padding: 3px 10px;
+    border-radius: 12px;
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.feed-item-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #c07a3a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.feed-item-link:hover {
+    color: #a0623a;
+    text-decoration: underline;
 }
 
 .badge-place {
-    background: #dbeafe;
-    color: #1e40af;
+    background: #e8f0e6;
+    color: #2d5a30;
 }
 
 .badge-event {
-    background: #dcfce7;
-    color: #166534;
+    background: #fdf0e4;
+    color: #a06a2e;
 }
 
 .badge-news {
-    background: #fee2e2;
-    color: #991b1b;
+    background: #e4efee;
+    color: #2e7f7c;
 }
+
+/* ── Map ── */
 
 #map {
     position: fixed;
-    top: 48px;
-    left: 350px;
+    top: 60px;
+    left: 400px;
     right: 0;
     bottom: 0;
     z-index: 1;
@@ -157,32 +226,124 @@ body {
     left: 0;
 }
 
-/* Leaflet popup overrides */
-.leaflet-popup-content-wrapper {
+/* ── Markers ── */
+
+.sim-marker {
+    width: 34px;
+    height: 42px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sim-marker::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 34px;
+    height: 34px;
+    background: var(--marker-color);
     border-radius: 8px;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.sim-marker::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid var(--marker-color);
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
+}
+
+.sim-marker-icon {
+    position: relative;
+    z-index: 1;
+    font-size: 15px;
+    margin-top: -4px;
+}
+
+/* ── Leaflet popup overrides ── */
+
+.leaflet-popup-content-wrapper {
+    border-radius: 14px;
+    border: none;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 
 .leaflet-popup-content {
-    margin: 12px;
-    font-family: inherit;
+    margin: 18px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.leaflet-popup-tip-container .leaflet-popup-tip {
+    box-shadow: none;
 }
 
 .popup-title {
-    font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #3a3832;
+    letter-spacing: -0.15px;
 }
 
 .popup-desc {
-    font-size: 13px;
-    color: #444;
+    font-size: 14px;
+    color: #6b6960;
+    line-height: 1.6;
 }
 
 .popup-meta {
-    font-size: 12px;
-    color: #888;
-    margin-top: 4px;
+    font-size: 13px;
+    color: #9a9889;
+    margin-top: 6px;
 }
+
+.popup-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #c07a3a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.popup-link:hover {
+    color: #a0623a;
+    text-decoration: underline;
+}
+
+/* ── Scrollbar ── */
+
+#sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+#sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background: #e0dfdb;
+    border-radius: 3px;
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: #c5c4bf;
+}
+
+/* ── Mobile ── */
 
 @media (max-width: 768px) {
     #sidebar {
