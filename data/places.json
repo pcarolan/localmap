@@ -1,0 +1,56 @@
+[
+  {
+    "id": "place-1",
+    "name": "Roast & Toast Cafe",
+    "category": "restaurant",
+    "lat": 45.3738,
+    "lng": -84.9535,
+    "description": "Popular downtown cafe serving espresso drinks, fresh-baked pastries, and hearty breakfast and lunch fare. A Petoskey staple since 1990.",
+    "address": "309 E Lake St, Petoskey, MI 49770"
+  },
+  {
+    "id": "place-2",
+    "name": "City Park Grill",
+    "category": "restaurant",
+    "lat": 45.3735,
+    "lng": -84.9517,
+    "description": "Historic restaurant and bar housed in one of Michigan's oldest operating taverns. Known for craft cocktails, steaks, and a lively atmosphere. Hemingway reportedly drank here.",
+    "address": "432 E Lake St, Petoskey, MI 49770"
+  },
+  {
+    "id": "place-3",
+    "name": "Grandpa Shorter's",
+    "category": "shop",
+    "lat": 45.3739,
+    "lng": -84.9538,
+    "description": "Iconic Up North gift shop selling Petoskey stones, Michigan-themed souvenirs, fudge, and local artisan goods. A must-visit for tourists since 1946.",
+    "address": "301 E Lake St, Petoskey, MI 49770"
+  },
+  {
+    "id": "place-4",
+    "name": "Stafford's Perry Hotel",
+    "category": "landmark",
+    "lat": 45.3755,
+    "lng": -84.9560,
+    "description": "Grand Victorian-era hotel overlooking Little Traverse Bay, built in 1899. Features fine dining at the Noggin Room and Rose Room, plus stunning sunset views from the veranda.",
+    "address": "100 Lewis St, Petoskey, MI 49770"
+  },
+  {
+    "id": "place-5",
+    "name": "McLean & Eakin Booksellers",
+    "category": "shop",
+    "lat": 45.3737,
+    "lng": -84.9537,
+    "description": "Independent bookstore in the heart of the Gaslight District offering a carefully curated selection of books, frequent author events, and knowledgeable staff recommendations.",
+    "address": "307 E Lake St, Petoskey, MI 49770"
+  },
+  {
+    "id": "place-6",
+    "name": "American Spoon",
+    "category": "shop",
+    "lat": 45.3736,
+    "lng": -84.9520,
+    "description": "Specialty food store featuring preserves, salsas, and pantry goods made from locally foraged and Michigan-grown fruits. Founded by Justin Rashid in 1982.",
+    "address": "411 E Lake St, Petoskey, MI 49770"
+  }
+]

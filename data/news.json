@@ -1,0 +1,42 @@
+[
+  {
+    "id": "news-1",
+    "title": "Bear River Recreation Area Trail Improvements Planned for Spring",
+    "category": "news",
+    "lat": 45.3710,
+    "lng": -84.9580,
+    "description": "The City of Petoskey has approved funding for expanded trail connections and new signage along the Bear River Valley Recreation Area. Work is expected to begin in May, adding a paved loop trail and improved river access points.",
+    "date": "2026-02-18",
+    "source": "Petoskey News-Review"
+  },
+  {
+    "id": "news-2",
+    "title": "New Bakery to Open in Downtown Gaslight District",
+    "category": "news",
+    "lat": 45.3736,
+    "lng": -84.9525,
+    "description": "A new artisan bakery, Northern Crust, is set to open in a renovated storefront on East Lake Street this spring. The owners, who relocated from Grand Rapids, plan to offer sourdough breads, pastries, and a small coffee bar.",
+    "date": "2026-02-20",
+    "source": "Petoskey News-Review"
+  },
+  {
+    "id": "news-3",
+    "title": "City Council Approves Waterfront Park Renovation Budget",
+    "category": "news",
+    "lat": 45.3758,
+    "lng": -84.9550,
+    "description": "Petoskey City Council voted unanimously to allocate $1.2 million toward renovations at Pennsylvania Park and the adjacent marina. The project includes updated playground equipment, ADA-accessible pathways, and a new pavilion for community events.",
+    "date": "2026-02-15",
+    "source": "Petoskey News-Review"
+  },
+  {
+    "id": "news-4",
+    "title": "Late-Season Snowfall Extends Ski Season at Nub's Nob",
+    "category": "news",
+    "lat": 45.4695,
+    "lng": -84.9210,
+    "description": "A series of February storms has dropped over 30 inches of fresh snow across Emmet County. Nub's Nob ski area near Harbor Springs has announced extended operations through mid-March, with all runs and lifts open.",
+    "date": "2026-02-22",
+    "source": "Petoskey News-Review"
+  }
+]

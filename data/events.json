@@ -1,0 +1,42 @@
+[
+  {
+    "id": "event-1",
+    "title": "Petoskey Farmers Market",
+    "category": "event",
+    "lat": 45.3742,
+    "lng": -84.9555,
+    "description": "Weekly indoor farmers market featuring local produce, baked goods, maple syrup, and artisan crafts from Northern Michigan growers and makers.",
+    "date": "2026-03-07",
+    "time": "9:00 AM – 1:00 PM"
+  },
+  {
+    "id": "event-2",
+    "title": "Gaslight District Gallery Walk",
+    "category": "event",
+    "lat": 45.3737,
+    "lng": -84.9530,
+    "description": "Free self-guided art walk through downtown Petoskey galleries and shops. Enjoy wine, hors d'oeuvres, and meet local artists as you stroll the Gaslight District.",
+    "date": "2026-03-20",
+    "time": "6:00 PM – 9:00 PM"
+  },
+  {
+    "id": "event-3",
+    "title": "Petoskey Winter Festival",
+    "category": "event",
+    "lat": 45.3750,
+    "lng": -84.9548,
+    "description": "Annual celebration of winter in Northern Michigan with ice sculptures, a chili cook-off, horse-drawn carriage rides, and family activities along the waterfront at Pennsylvania Park.",
+    "date": "2026-03-14",
+    "time": "10:00 AM – 4:00 PM"
+  },
+  {
+    "id": "event-4",
+    "title": "Live Music at City Park Grill",
+    "category": "event",
+    "lat": 45.3735,
+    "lng": -84.9517,
+    "description": "Live acoustic performance by regional musicians at the historic City Park Grill. Enjoy dinner and drinks while listening to a mix of folk, blues, and Americana.",
+    "date": "2026-03-21",
+    "time": "7:00 PM – 10:00 PM"
+  }
+]
