@@ -92,7 +92,7 @@ const MARKER_ICONS = {
 
 function createMarkerIcon(type, category) {
     const icon = MARKER_ICONS[category] || MARKER_ICONS[type] || MARKER_ICONS.place;
-    const color = MARKER_COLORS[type] || MARKER_COLORS.place;
+    const color = MARKER_COLORS[category] || MARKER_COLORS[type] || MARKER_COLORS.place;
     return L.divIcon({
         className: 'custom-marker',
         html: `<div class="sim-marker" style="--marker-color:${color}"><span class="sim-marker-icon">${icon.emoji}</span></div>`,
@@ -107,7 +107,7 @@ function addMarkers(items) {
     markers = [];
     placeMarkers = {};
 
-    items.forEach((item, index) => {
+    items.forEach(item => {
         const marker = L.marker([item.lat, item.lng], {
             icon: createMarkerIcon(item.type, item.category)
         }).addTo(map);
@@ -162,7 +162,7 @@ function renderFeed(items) {
         const div = document.createElement('div');
         div.className = 'feed-item';
         const title = item.name || item.title;
-        const badgeClass = `badge-${item.type}`;
+        const badgeClass = item.category ? `badge-${item.category}` : `badge-${item.type}`;
 
         let eventLine = '';
         if (item.eventDate) {
@@ -173,7 +173,7 @@ function renderFeed(items) {
         const posted = item.postedAt ? formatPostedAt(item.postedAt) : '';
 
         div.innerHTML = `
-            <span class="feed-item-badge ${badgeClass}">${item.type}</span>
+            <span class="feed-item-badge ${badgeClass}">${item.category || item.type}</span>
             <div class="feed-item-title">${title}</div>
             ${eventLine ? `<div class="feed-item-event-date">${eventLine}</div>` : ''}
             ${item.address ? `<div class="feed-item-meta">${item.address}</div>` : ''}

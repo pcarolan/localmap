@@ -195,7 +195,10 @@ body {
     text-decoration: underline;
 }
 
-.badge-place {
+.badge-place,
+.badge-restaurant,
+.badge-shop,
+.badge-landmark {
     background: #e8f0e6;
     color: #2d5a30;
 }
