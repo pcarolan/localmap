@@ -6,8 +6,11 @@
     "lat": 45.3742,
     "lng": -84.9555,
     "description": "Weekly indoor farmers market featuring local produce, baked goods, maple syrup, and artisan crafts from Northern Michigan growers and makers.",
-    "date": "2026-03-07",
-    "time": "9:00 AM – 1:00 PM"
+    "postedAt": "2026-02-20T10:00:00-05:00",
+    "eventDate": "2026-03-07",
+    "eventTime": "9:00 AM – 1:00 PM",
+    "source": "Petoskey Area Farmers Market",
+    "link": "https://www.petoskeyarea.com/farmers-market"
   },
   {
     "id": "event-2",
@@ -16,8 +19,11 @@
     "lat": 45.3737,
     "lng": -84.9530,
     "description": "Free self-guided art walk through downtown Petoskey galleries and shops. Enjoy wine, hors d'oeuvres, and meet local artists as you stroll the Gaslight District.",
-    "date": "2026-03-20",
-    "time": "6:00 PM – 9:00 PM"
+    "postedAt": "2026-02-18T14:30:00-05:00",
+    "eventDate": "2026-03-20",
+    "eventTime": "6:00 PM – 9:00 PM",
+    "source": "Crooked Tree Arts Center",
+    "link": "https://www.crookedtree.org"
   },
   {
     "id": "event-3",
@@ -26,8 +32,11 @@
     "lat": 45.3750,
     "lng": -84.9548,
     "description": "Annual celebration of winter in Northern Michigan with ice sculptures, a chili cook-off, horse-drawn carriage rides, and family activities along the waterfront at Pennsylvania Park.",
-    "date": "2026-03-14",
-    "time": "10:00 AM – 4:00 PM"
+    "postedAt": "2026-02-15T09:00:00-05:00",
+    "eventDate": "2026-03-14",
+    "eventTime": "10:00 AM – 4:00 PM",
+    "source": "Petoskey Regional Chamber",
+    "link": "https://www.petoskey.com"
   },
   {
     "id": "event-4",
@@ -36,7 +45,49 @@
     "lat": 45.3735,
     "lng": -84.9517,
     "description": "Live acoustic performance by regional musicians at the historic City Park Grill. Enjoy dinner and drinks while listening to a mix of folk, blues, and Americana.",
-    "date": "2026-03-21",
-    "time": "7:00 PM – 10:00 PM"
+    "postedAt": "2026-02-21T16:00:00-05:00",
+    "eventDate": "2026-03-21",
+    "eventTime": "7:00 PM – 10:00 PM",
+    "source": "City Park Grill",
+    "link": "https://www.cityparkgrill.com"
+  },
+  {
+    "id": "event-5",
+    "title": "Vault 432: Fallout-Themed Dinner at City Park Grill",
+    "category": "event",
+    "lat": 45.3735,
+    "lng": -84.9517,
+    "description": "An immersive five-course post-apocalyptic dining experience inspired by the Fallout video game and TV series. The menu features creative dishes like Gator Claw Skewer, Braised Deathclaw Brisket, and Sugar Bomb Brownie. Costumes encouraged but optional. Reservations required by calling 231-347-0101.",
+    "postedAt": "2026-02-22T10:00:00-05:00",
+    "eventDate": "2026-03-07",
+    "eventTime": "6:30 PM",
+    "source": "City Park Grill",
+    "link": "https://www.cityparkgrill.com"
+  },
+  {
+    "id": "event-6",
+    "title": "Little Waves: Children's Music Program",
+    "category": "event",
+    "lat": 45.3732,
+    "lng": -84.9545,
+    "description": "Free interactive music session for children ages 3-10 presented by the Great Lakes Chamber Orchestra. Kids hear live musicians demonstrate their instruments, enjoy a musical story, and participate in fun music-related activities. No registration required.",
+    "postedAt": "2026-02-22T10:00:00-05:00",
+    "eventDate": "2026-03-14",
+    "eventTime": "10:30 AM",
+    "source": "Great Lakes Chamber Orchestra",
+    "link": "https://glcorchestra.org/education/little-waves/"
+  },
+  {
+    "id": "event-7",
+    "title": "Project Connect 2026",
+    "category": "event",
+    "lat": 45.3850,
+    "lng": -84.9450,
+    "description": "A day of service at North Central Michigan College connecting individuals in need with health and human services from around 50 local non-profit agencies and businesses. Free and open to the community.",
+    "postedAt": "2026-02-22T10:00:00-05:00",
+    "eventDate": "2026-03-18",
+    "eventTime": "10:00 AM",
+    "source": "North Central Michigan College",
+    "link": "https://allevents.in/petoskey/project-connect-2026/200029170856235"
   }
 ]

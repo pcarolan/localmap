@@ -6,8 +6,9 @@
     "lat": 45.3710,
     "lng": -84.9580,
     "description": "The City of Petoskey has approved funding for expanded trail connections and new signage along the Bear River Valley Recreation Area. Work is expected to begin in May, adding a paved loop trail and improved river access points.",
-    "date": "2026-02-18",
-    "source": "Petoskey News-Review"
+    "postedAt": "2026-02-18T11:30:00-05:00",
+    "source": "Petoskey News-Review",
+    "link": "https://www.petoskeynews.com"
   },
   {
     "id": "news-2",
@@ -16,8 +17,9 @@
     "lat": 45.3736,
     "lng": -84.9525,
     "description": "A new artisan bakery, Northern Crust, is set to open in a renovated storefront on East Lake Street this spring. The owners, who relocated from Grand Rapids, plan to offer sourdough breads, pastries, and a small coffee bar.",
-    "date": "2026-02-20",
-    "source": "Petoskey News-Review"
+    "postedAt": "2026-02-20T09:15:00-05:00",
+    "source": "Petoskey News-Review",
+    "link": "https://www.petoskeynews.com"
   },
   {
     "id": "news-3",
@@ -26,8 +28,9 @@
     "lat": 45.3758,
     "lng": -84.9550,
     "description": "Petoskey City Council voted unanimously to allocate $1.2 million toward renovations at Pennsylvania Park and the adjacent marina. The project includes updated playground equipment, ADA-accessible pathways, and a new pavilion for community events.",
-    "date": "2026-02-15",
-    "source": "Petoskey News-Review"
+    "postedAt": "2026-02-15T17:45:00-05:00",
+    "source": "Petoskey News-Review",
+    "link": "https://www.petoskeynews.com"
   },
   {
     "id": "news-4",
@@ -36,7 +39,30 @@
     "lat": 45.4695,
     "lng": -84.9210,
     "description": "A series of February storms has dropped over 30 inches of fresh snow across Emmet County. Nub's Nob ski area near Harbor Springs has announced extended operations through mid-March, with all runs and lifts open.",
-    "date": "2026-02-22",
-    "source": "Petoskey News-Review"
+    "postedAt": "2026-02-22T07:00:00-05:00",
+    "source": "Petoskey News-Review",
+    "link": "https://www.petoskeynews.com"
+  },
+  {
+    "id": "news-5",
+    "title": "Northmen Hockey Sets Program Record, Advances to State Quarterfinals",
+    "category": "news",
+    "lat": 45.3735,
+    "lng": -84.9553,
+    "description": "Petoskey's hockey team set a new program record with 22 wins this season after a 4-0 regional semifinal victory over Cadillac. The Northmen then won the regional championship in double overtime, 2-1, over Traverse City St. Francis and will face Alpena in the state quarterfinals Saturday in Gaylord.",
+    "postedAt": "2026-02-22T10:00:00-05:00",
+    "source": "Petoskey News-Review",
+    "link": "https://sports.yahoo.com/articles/northmen-hockey-sets-program-wins-180551903.html"
+  },
+  {
+    "id": "news-6",
+    "title": "Vehicle-Train Collision Closes Petoskey Intersection",
+    "category": "news",
+    "lat": 45.3735,
+    "lng": -84.9553,
+    "description": "Petoskey Public Safety responded to a vehicle-train collision at the intersection of Standish Avenue and Clarion Avenue. No injuries were reported, but the intersection was closed for several hours while authorities investigated. Motorists were advised to seek alternate routes.",
+    "postedAt": "2026-02-22T10:00:00-05:00",
+    "source": "UpNorthLive",
+    "link": "https://upnorthlive.com/news/local/vehicletrain-crash-closes-standish-and-clarion-intersection-in-petoskey"
   }
 ]
